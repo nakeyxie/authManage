@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--suppress ALL-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../../static/layui/css/layui.css" th:href="@{/layui/css/layui.css}" media="all" />
+	<link rel="stylesheet" href="../../../static/mycss/public.css" th:href="@{/mycss/public.css}" media="all" />
+</head>
+<body class="childrenBody">
+<form class="layui-form" id="addUserForm" style="width:80%;">
+	<input type="hidden" name="id" th:value="${user?.id}"/>
+	<div class="layui-form-item layui-row layui-col-xs12">
+		<label class="layui-form-label">姓名</label>
+		<div class="layui-input-block">
+			<input type="text" class="layui-input " name="username" th:value="${user?.username}" lay-verify="required" placeholder="请输入姓名">
+		</div>
+	</div>
+	<div class="layui-form-item layui-row layui-col-xs12">
+		<label class="layui-form-label">邮箱</label>
+		<div class="layui-input-block">
+			<input type="text" class="layui-input " name="mail" th:value="${user?.mail}" lay-verify="email" placeholder="请输入邮箱">
+		</div>
+	</div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">手机号</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input " name="telephone" th:value="${user?.telephone}" lay-verify="phone" placeholder="请输入手机号">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">所属部门</label>
+        <div class="layui-input-block">
+            <input type="text" id="dept_select_tree"  name="deptId" th:value="${user?.deptId}" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+	<div class="layui-row">
+		<div class="magb15 layui-col-md4 layui-col-xs12">
+			<label class="layui-form-label">性别</label>
+			<div class="layui-input-block ">
+				<input type="radio" name="sex" value="m" title="男"  th:checked="${user?.sex eq 'm' or user eq null}  ? true : false " >
+				<input type="radio" name="sex" value="f" title="女" th:checked="${user?.sex } eq 'f' ? true : false ">
+			</div>
+		</div>
+		<div class="magb15 layui-col-md4 layui-col-xs12">
+			<label class="layui-form-label">用户状态</label>
+			<div class="layui-input-block">
+				<select name="status" class="userStatus" lay-filter="userStatus" lay-verify="required">
+					<option value="0"  th:selected="${user?.status eq 0 or  user eq null}  ? true : false " th:selected="${user } eq null ? true : false ">正常</option>
+					<option value="1" th:selected="${user?.status } eq 1 ? true : false ">冻结</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="layui-form-item layui-row layui-col-xs12">
+		<label class="layui-form-label">用户简介</label>
+		<div class="layui-input-block">
+			<textarea placeholder="请输入用户简介" class="layui-textarea " name="remark" th:inline="text">[[${user?.remark eq null ?'':user?.remark}]]</textarea>
+		</div>
+	</div>
+	<div class="layui-form-item layui-row layui-col-xs12">
+		<div class="layui-input-block" style="text-align: center">
+			<button class="layui-btn layui-btn-sm" lay-submit="" lay-filter="addUser" id="add_user_btn">保存</button><!--lay-submit="" lay-filter="addUser"-->
+			<button type="reset" class="layui-btn layui-btn-sm layui-btn-primary">重置</button>
+		</div>
+	</div>
+</form>
+<!--通用JS-->
+<div th:replace="common/footer :: footer"></div>
+<script type="text/javascript" src="../../../static/myJs/accessManage/user/userAdd.js" th:src="@{/myJs/accessManage/user/userAdd.js}"></script>
+</body>
+</html>

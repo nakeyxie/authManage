@@ -1,0 +1,181 @@
+/* admin查询条件样式 */
+.dyl-admin{
+	min-height: 70px;
+	margin: 10px 10px;
+	clear: both;
+	padding: 15px;
+    line-height: 22px;
+    border-left: 5px solid #009688;
+    border-radius: 0 2px 2px 0;
+    background-color: #f2f2f2;
+}
+.dyl-admin .layui-inline{
+    margin-bottom: 10px;
+}
+/* .dyl-admin .layui-form-label{
+    width: auto;
+} */
+fieldset{
+  margin: 20px 20px;
+  border: 1px solid
+}
+.form-content fieldset{
+  border: 1px solid #c9c9c9 !important; 
+ /*  margin: 20px 109px; */
+  border: 1px solid
+}
+/* .layui-form-item label{
+	 width: auto !important;
+} */
+.news_list{
+	padding: 0px 20px;
+}
+.layui-elem-quote{
+  margin: 10px 10px;
+}
+#Images li{   width: 80px;
+  height: 80px;
+  float: left;
+  overflow: hidden;
+  padding: 10px;}
+#Images li img{   width: 100%;height: 88%; }
+.uploadify-button {
+    color: #FFFFFF ;
+    text-decoration: none;
+}
+.uploadify-button:hover {
+    color: #FFFFFF ;
+    text-decoration: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+/* .layui-form-label {
+  padding: 15px 15px !important;
+} */
+.layui-elem-quote {
+  min-height: 37px;
+}
+.layui-timeline-title{
+	color: #FFFFFF ;
+}
+.waTabel{
+	width: 100%
+}
+.waTabel .layui-laypage a{
+	color: #FFFFFF ;
+}
+.waPresentation{
+	margin-top: 20px;
+}
+.form-content {
+    padding-right: 50px;
+    padding-top: 20px;
+    /* margin-left: -24px; */
+}
+#qddl dd span {
+	color: #000 !important;;
+}
+.duoxuan {
+  max-height: 110px;
+  overflow-y: scroll;
+}
+.Label{ line-height:normal; height:auto;overflow:hidden;min-height:38px; left:0; z-index:99;position:relative;background:none;}
+.Label a{ padding:2px 5px; background:#DC433D; border-radius:2px; color:#fff; display:block; line-height:20px; height:20px; margin:2px 5px 2px 0; float:left;}
+.Label a span{ float:left;}
+.Label a i{ float:left; display:block; margin:2px 0 0 2px; border-radius:2px; width:8px; height:8px; background:url(../images/close.png) no-repeat center; background-size:65%; padding:4px;}
+.Label a i:hover{ background-color:#545556;}
+#xsDiv div span{
+	text-align: center;
+	min-width: 41px;
+}
+/*透明弹窗样式*/
+body .wg-class .layui-layer-title{border: none;background: rgba(0,0,0,.9); color:#fff;  font-weight: bold;}
+body .wg-class .layui-layer-setwin .layui-layer-close1{ background: url(../images/close.png) no-repeat !important;}
+body .wg-class{  background: 0 0;}
+body .wg-class .layui-layer-setwin{color:#fff; border: none;}
+body .wg-class .layui-layer-content{background: rgba(0,0,0,.8); color:#fff; border: none;}
+body .wg-class .layui-layer-content .layui-form-label{  /* color: #DC433D; */font-weight: bold;}
+body .wg-class .layui-layer-content .layui-input:focus{border-color: #1484A5 !important;}
+body .wg-class .layui-layer-content .layui-input{border-radius: 4px;}
+body .wg-class .layui-layer-content .layui-anim-upbit{color:#000; border: none;}
+body .wg-class .layui-layer-btn{background: rgba(0,0,0,.9);border: none;color:#fff;}
+body .wg-class .layui-layer-btn .layui-layer-btn0{  border-color: #DC433D;background-color: #DC433D;}
+body .wg-class {border: 3px solid #8D8D8D;border: 3px solid rgba(0,0,0,.2);border-radius: 5px;box-shadow: none}
+/*锟斤拷锟斤拷tab锟斤拷式 */
+body .wg-class .layui-tab-title li{min-width: 33px;}
+body .wg-class .layui-tab-card>.layui-tab-title{background: 0 0;}
+/*锟斤拷锟斤拷table锟斤拷式 */
+body .wg-class .layui-table-body tr{color:#fff;}
+body .wg-class .layui-table-body tr:hover{color:#000;}
+body .wg-class .layui-table-body tr:hover td {border-color: #000;}
+body .wg-class .layui-table-body tr td a {color:#DC433D;}
+body .wg-class  .waTab .layui-tab-item ul li a {color: #fff;}
+body .wg-class  .layui-form-mid  a {cursor: pointer;color:#DC433D;}
+body .wg-class  .layui-laypage a, .layui-laypage span {color:#FFF;}
+
+body .layui-layer-molv .layui-layer-btn .layui-layer-btn1{
+    background: #fb360a;
+    color: #FFF;
+    border-color: #FFF;
+}
+
+.waPresentation .layui-form-onswitch{
+	border-color: #DC433D;
+}
+/*锟斤拷锟斤拷锟斤拷式*/
+.layui-table-cell .iconfont{
+	font-size:26px !important;
+	line-height: 0px;
+}
+/*锟介看锟斤拷锟斤拷锟斤拷式*/
+.form-view .layui-form-item {
+  margin-bottom: 0px;
+  clear: both;
+}
+/*锟斤拷锟斤拷图片锟斤拷式*/
+.layer-photos {
+    	margin: 10px 0;
+}
+.layer-photos img {
+    width: 80px;
+    height: 80px;
+}
+/*form锟斤拷锟斤拷锟斤拷锟绞*/
+.form-title{
+  margin-bottom: 10px;
+  margin-left: 17px;
+}
+.form-title em{
+  font-size: 20px;
+  color: #DC433D;
+  padding-left: 18px;
+  border-left: #DC433D 4px solid;
+}
+img {
+    border: none;
+}
+.shange{
+	padding: 0 10px;
+}
+/*锟睫革拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟节碉拷锟斤拷锟斤拷锟斤拷*/
+/* .layui-layer-page .layui-layer-content{
+  overflow: inherit !important;
+} */
+@media screen and (max-width: 900px) {
+	.news_list{
+		padding: 0px 0px;
+	}
+	.layui-elem-quote{
+	  margin: 10px 0px;
+	}
+	.layui-laydate-range{
+		width: 280px !important;
+	}
+}
+/* .waPresentation .layui-input-inline{
+	width: 60%
+} */

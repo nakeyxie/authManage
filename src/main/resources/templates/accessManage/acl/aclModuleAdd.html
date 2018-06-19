@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--suppress ALL-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../../static/layui/css/layui.css" th:href="@{/layui/css/layui.css}" media="all" />
+	<link rel="stylesheet" href="../../../static/mycss/public.css" th:href="@{/mycss/public.css}" media="all" />
+</head>
+<body class="childrenBody">
+<form class="layui-form" id="addaclModuleForm" style="width:80%;">
+	<input type="hidden" name="id" th:value="${aclModule?.id}"/>
+	<div class="layui-form-item layui-row layui-col-xs12">
+		<label class="layui-form-label">权限模块名</label>
+		<div class="layui-input-block">
+			<input type="text" class="layui-input " name="name" th:value="${aclModule?.name}" lay-verify="required" placeholder="请输入姓名">
+		</div>
+	</div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">所属模块</label>
+        <div class="layui-input-block">
+            <input type="text" id="aclModule_select_tree"  name="parentId" th:value="${aclModule?.parentId}" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+	<div class="layui-form-item layui-form-text layui-row layui-col-xs12">
+		<label class="layui-form-label">顺序</label>
+		<div class="layui-input-block">
+			<input type="text" class="layui-input" name="seq" th:value="${aclModule?.seq}" lay-verify="number" placeholder="1">
+		</div>
+	</div>
+	<div class="layui-form-item layui-row layui-col-xs12">
+		<label class="layui-form-label">备注</label>
+		<div class="layui-input-block">
+			<textarea placeholder="请输入备注" class="layui-textarea " name="remark" th:inline="text">[[${aclModule?.remark eq null ?'':aclModule?.remark}]]</textarea>
+		</div>
+	</div>
+	<div class="layui-form-item layui-row layui-col-xs12">
+		<div class="layui-input-block" style="text-align: center">
+			<button class="layui-btn layui-btn-sm" lay-submit="" lay-filter="addaclModule" id="add_aclModule_btn">保存</button><!--lay-submit="" lay-filter="addaclModule"-->
+			<button type="reset" class="layui-btn layui-btn-sm layui-btn-primary">重置</button>
+		</div>
+	</div>
+</form>
+<!--通用JS-->
+<div th:replace="common/footer :: footer"></div>
+<script type="text/javascript" src="../../../static/myJs/accessManage/acl/aclModuleAdd.js" th:src="@{/myJs/accessManage/acl/aclModuleAdd.js}"></script>
+</body>
+</html>

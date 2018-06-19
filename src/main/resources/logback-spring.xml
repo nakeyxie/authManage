@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 日志最大的历史 30天 -->
+    <property name="maxHistory" value="30"/>
+    <!--控制台-->
+    <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>
+                %d{yyyy-M-d HH:mm:ss} - [%-5level] - [%logger{35}] - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+
+    <!--记录info日志文件-->
+    <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--拦截error日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>DENY</onMatch> <!-- 如果匹配的是Error就拦截-->
+            <onMismatch>ACCPET</onMismatch> <!-- 不是就执行-->
+        </filter>
+        <encoder>
+            <pattern>
+                %d{yyyy-M-d HH:mm:ss} - [%-5level] - [%logger{35}] - %msg%n
+            </pattern>
+        </encoder>
+        <!--滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>E://log/info/info.%d{yyyy-M-d}.log</fileNamePattern>
+            <maxHistory>${maxHistory}</maxHistory><!-- 日志最大的历史 -->
+        </rollingPolicy>
+    </appender>
+
+    <!--记录error日志文件-->
+    <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--只拦截Error日志-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>
+                %d{yyyy-M-d HH:mm:ss} - [%-5level] - [%logger{35}] - %msg%n
+            </pattern>
+        </encoder>
+        <!--滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>E://log/error/error.%d{yyyy-M-d}.log</fileNamePattern>
+            <maxHistory>${maxHistory}</maxHistory><!-- 日志最大的历史 -->
+        </rollingPolicy>
+    </appender>
+
+
+    <root level="info">
+        <appender-ref  ref="consoleLog"/>
+        <appender-ref  ref="fileInfoLog"/>
+        <appender-ref  ref="fileErrorLog"/>
+    </root>
+</configuration>
