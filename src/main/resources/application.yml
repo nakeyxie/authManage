@@ -8,11 +8,11 @@ server:
 #数据库连接
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/permission?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false
+    url: jdbc:mysql://47.104.89.59:3306/permission?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false
    # driver-class-name: com.mysql.jdbc.Driver
     driverClassName: com.mysql.jdbc.Driver
     username: root
-    password: 111111
+    password: Wy19910315@
     #用druid连接池
     type: com.alibaba.druid.pool.DruidDataSource
 #连接池的配置信息
@@ -66,3 +66,5 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
   params: count=countSql
+
+
