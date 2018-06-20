@@ -52,7 +52,7 @@ public class SysUserServiceImpl implements SysUserService {
         String password = "111111";//TODO  暂时默认
 
         SysUser user = SysUser.builder().username(param.getUsername()).telephone(param.getTelephone()).mail(param.getMail())
-                .deptId(param.getDeptId()).sex(param.getSex()).status(param.getStatus()).remark(param.getRemark()).build();
+                .deptId(param.getDeptId()).job(param.getJob()).sex(param.getSex()).status(param.getStatus()).remark(param.getRemark()).build();
         user.setOperator(RequestHolder.getCurrentUser().getUsername());
         user.setOperateIp(IpUtil.getRemoteIp(RequestHolder.getCurrentRequest()));
         user.setOperateTime(new Date());

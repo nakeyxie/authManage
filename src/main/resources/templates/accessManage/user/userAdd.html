@@ -40,6 +40,12 @@
             <input type="text" id="dept_select_tree"  name="deptId" th:value="${user?.deptId}" autocomplete="off" class="layui-input">
         </div>
     </div>
+	<div class="layui-form-item layui-row layui-col-xs12">
+		<label class="layui-form-label">职位</label>
+		<div class="layui-input-block">
+			<input type="text" class="layui-input " name="job" th:value="${user?.job}" lay-verify="required" placeholder="请输入职位">
+		</div>
+	</div>
 	<div class="layui-row">
 		<div class="magb15 layui-col-md4 layui-col-xs12">
 			<label class="layui-form-label">性别</label>

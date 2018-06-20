@@ -29,6 +29,10 @@ public class UserParam {
     @Length(min = 5, max = 50, message = "邮箱长度需要在50个字符以内")
     private String mail;
 
+    @NotBlank(message = "职位不可以为空")
+    @Length(min = 1, max = 20, message = "职位长度需要在20个字以内")
+    private String job;
+
     @NotNull(message = "必须提供用户所在的部门")
     private Integer deptId;
 

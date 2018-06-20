@@ -16,8 +16,7 @@ layui.use(['form','layer','treeselect'],function(){
             if(result.code==0){
                 layer.msg("保存部门成功！",{icon: 6});
                 layer.closeAll("iframe");
-                //刷新父页面
-                parent.location.reload();
+                top.document.getElementById("refresh_btn").click();
             }else{
                 layer.msg(result.msg,{icon:5});
             }
