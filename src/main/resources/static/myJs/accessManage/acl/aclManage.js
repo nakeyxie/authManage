@@ -59,7 +59,7 @@ layui.use(['form','layer','table','laytpl','tree'],function(){
             url : webPath+'/acl/list/'+aclModuleId,
             cellMinWidth: 60,
             page : true,
-            width : $("#acl_table_div").width()-20,
+            width : $("#acl_table_div").width()-30,
             height : "full-170",
             limits : [10,15,20,25],
             limit : 10,
