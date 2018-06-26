@@ -59,7 +59,7 @@ layui.use(['form','layer','table','laytpl','tree'],function(){
             url : webPath+'/user/list/'+deptId,
             cellMinWidth: 60,
             page : true,
-            width : $("#user_table_div").width()-20,
+            width : $("#user_table_div").width()-30,
             height : "full-170",
             limits : [10,15,20,25],
             limit : 10,
