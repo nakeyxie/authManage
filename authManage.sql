@@ -1,9 +1,6 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 47.104.89.59
-Source Server Version : 50721
-Source Host           : 47.104.89.59:3306
 Source Database       : permission
 
 Target Server Type    : MYSQL
